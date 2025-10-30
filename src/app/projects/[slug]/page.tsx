@@ -15,6 +15,8 @@ import { LinearRegressionViz } from '@/components/visualizations/LinearRegressio
 import { KMeansViz } from '@/components/visualizations/KMeansViz'
 import { LogisticRegressionViz } from '@/components/visualizations/LogisticRegressionViz'
 import { DecisionTreeViz } from '@/components/visualizations/DecisionTreeViz'
+import { RandomForestViz } from '@/components/visualizations/RandomForestViz'
+import { SVMViz } from '@/components/visualizations/SVMViz'
 
 // Function to get realistic output for each project
 function getProjectOutput(slug: string): string[] {

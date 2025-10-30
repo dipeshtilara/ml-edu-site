@@ -866,6 +866,9 @@ export default function ProjectDetailPage() {
                 {project.slug === 'logistic-regression-email-spam' && (
                   <LogisticRegressionViz isRunning={isRunning} step={visualStep} />
                 )}
+                {project.slug === 'decision-tree-medical-diagnosis' && (
+                  <DecisionTreeViz isRunning={isRunning} step={visualStep} />
+                )}
               </div>
             )}
 

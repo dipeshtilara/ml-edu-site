@@ -1273,6 +1273,12 @@ export default function ProjectDetailPage() {
                 {project.slug === 'decision-tree-medical-diagnosis' && (
                   <DecisionTreeViz isRunning={isRunning} step={visualStep} />
                 )}
+                {project.slug === 'random-forest-stock-prediction' && (
+                  <RandomForestViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'svm-handwritten-digit' && (
+                  <SVMViz isRunning={isRunning} step={visualStep} />
+                )}
               </div>
             )}
 

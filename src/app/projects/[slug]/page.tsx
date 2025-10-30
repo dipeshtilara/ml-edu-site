@@ -11,6 +11,9 @@ import projectsData from '@/data/projects.json'
 import { CodeViewer } from '@/components/project/CodeViewer'
 import { PythonRunner } from '@/components/project/PythonRunner'
 import { WordExporter } from '@/components/project/WordExporter'
+import { LinearRegressionViz } from '@/components/visualizations/LinearRegressionViz'
+import { KMeansViz } from '@/components/visualizations/KMeansViz'
+import { LogisticRegressionViz } from '@/components/visualizations/LogisticRegressionViz'
 
 // Function to get realistic output for each project
 function getProjectOutput(slug: string): string[] {

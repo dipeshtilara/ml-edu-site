@@ -17,6 +17,12 @@ import { LogisticRegressionViz } from '@/components/visualizations/LogisticRegre
 import { DecisionTreeViz } from '@/components/visualizations/DecisionTreeViz'
 import { RandomForestViz } from '@/components/visualizations/RandomForestViz'
 import { SVMViz } from '@/components/visualizations/SVMViz'
+import { NeuralNetworkViz } from '@/components/visualizations/NeuralNetworkViz'
+import { NaiveBayesViz } from '@/components/visualizations/NaiveBayesViz'
+import { CNNViz } from '@/components/visualizations/CNNViz'
+import { PCAViz } from '@/components/visualizations/PCAViz'
+import { TimeSeriesViz } from '@/components/visualizations/TimeSeriesViz'
+import { EnsembleViz } from '@/components/visualizations/EnsembleViz'
 
 // Function to get realistic output for each project
 function getProjectOutput(slug: string): string[] {

@@ -5,6 +5,12 @@
   "repository": "https://github.com/dipeshtilara/ml-edu-site",
   "author": "emergent-agent-e1 <github@emergent.sh>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
     "@radix-ui/react-dialog": "^1.1.15",

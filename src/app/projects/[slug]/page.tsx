@@ -512,6 +512,7 @@ export default function ProjectDetailPage() {
   const handleStopCode = () => {
     setIsRunning(false)
     setOutput(prev => prev + '\n\nExecution stopped by user.')
+    setVisualStep(0)
   }
 
   const handleExportWord = async () => {

@@ -799,129 +799,119 @@ export default function ProjectDetailPage() {
         )}
 
         {activeTab === 'demo' && (
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div className="space-y-6">
             {/* Controls */}
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <Play className="h-5 w-5 mr-2" />
-                    Interactive Demo
-                  </CardTitle>
-                  <CardDescription>
-                    Run the complete AI project and see real-time results
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex gap-3">
-                    <Button 
-                      onClick={handleRunCode} 
-                      disabled={isRunning}
-                      className="flex-1"
-                    >
-                      {isRunning ? (
-                        <>
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
-                          Running...
-                        </>
-                      ) : (
-                        <>
-                          <Play className="mr-2 h-4 w-4" />
-                          Run Project
-                        </>
-                      )}
-                    </Button>
-                    
-                    {isRunning && (
-                      <Button onClick={handleStopCode} variant="outline">
-                        <Square className="h-4 w-4" />
-                      </Button>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Play className="h-5 w-5 mr-2" />
+                  Interactive Demo
+                </CardTitle>
+                <CardDescription>
+                  Run the complete AI project and see real-time results with visual analytics
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex gap-3">
+                  <Button 
+                    onClick={handleRunCode} 
+                    disabled={isRunning}
+                    className="flex-1"
+                  >
+                    {isRunning ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
+                        Running...
+                      </>
+                    ) : (
+                      <>
+                        <Play className="mr-2 h-4 w-4" />
+                        Run Project
+                      </>
                     )}
-                  </div>
+                  </Button>
                   
-                  <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
-                    <div className="flex items-start">
-                      <AlertCircle className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-blue-900 mb-1">Demo Environment</p>
-                        <p className="text-blue-700">
-                          This project runs using Pyodide (Python in the browser). 
-                          All computations happen locally - no data is sent to servers.
-                        </p>
-                      </div>
+                  {isRunning && (
+                    <Button onClick={handleStopCode} variant="outline">
+                      <Square className="h-4 w-4" />
+                    </Button>
+                  )}
+                </div>
+                
+                <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
+                  <div className="flex items-start">
+                    <AlertCircle className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-blue-900 mb-1">Demo Environment</p>
+                      <p className="text-blue-700">
+                        This project runs using Pyodide (Python in the browser). 
+                        All computations happen locally - no data is sent to servers.
+                      </p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </CardContent>
+            </Card>
 
-              {/* Dependencies Note */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Dependencies & Notes</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Dependencies:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                      <li>• <code className="bg-gray-200 px-1 rounded">math</code> - Mathematical operations</li>
-                      <li>• <code className="bg-gray-200 px-1 rounded">random</code> - Data generation and sampling</li>
-                      <li>• <code className="bg-gray-200 px-1 rounded">typing</code> - Type hints for better code</li>
-                    </ul>
-                    <p className="text-xs text-gray-500">
-                      This implementation uses only Python built-in libraries for 
-                      educational purposes and maximum compatibility.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Visual Analytics - Rendered based on project type */}
+            {visualStep > 0 && (
+              <div>
+                {project.slug === 'linear-regression-student-performance' && (
+                  <LinearRegressionViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'kmeans-customer-segmentation' && (
+                  <KMeansViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'logistic-regression-email-spam' && (
+                  <LogisticRegressionViz isRunning={isRunning} step={visualStep} />
+                )}
+              </div>
+            )}
 
-            {/* Output */}
-            <div>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span>Output</span>
-                    {output && (
-                      <Button 
-                        onClick={() => navigator.clipboard.writeText(output)}
-                        variant="outline" 
-                        size="sm"
-                      >
-                        <Copy className="h-4 w-4" />
-                      </Button>
-                    )}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="bg-black text-green-400 p-4 rounded-lg font-mono text-sm min-h-[400px] overflow-auto">
-                    {isRunning && !output && (
-                      <div className="flex items-center">
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-green-400 mr-2" />
-                        <span>Initializing Python environment...</span>
+            {/* Text Output */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  <span>Console Output</span>
+                  {output && (
+                    <Button 
+                      onClick={() => navigator.clipboard.writeText(output)}
+                      variant="outline" 
+                      size="sm"
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  )}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-black text-green-400 p-4 rounded-lg font-mono text-sm min-h-[400px] max-h-[600px] overflow-auto">
+                  {isRunning && !output && (
+                    <div className="flex items-center">
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-green-400 mr-2" />
+                      <span>Initializing Python environment...</span>
+                    </div>
+                  )}
+                  {error && (
+                    <div className="text-red-400">
+                      <div className="flex items-center mb-2">
+                        <AlertCircle className="h-4 w-4 mr-2" />
+                        <span>Error:</span>
                       </div>
-                    )}
-                    {error && (
-                      <div className="text-red-400">
-                        <div className="flex items-center mb-2">
-                          <AlertCircle className="h-4 w-4 mr-2" />
-                          <span>Error:</span>
-                        </div>
-                        <pre className="whitespace-pre-wrap">{error}</pre>
-                      </div>
-                    )}
-                    {output && (
-                      <pre className="whitespace-pre-wrap">{output}</pre>
-                    )}
-                    {!output && !error && !isRunning && (
-                      <div className="text-gray-500">
-                        Click "Run Project" to execute the AI model and see results...
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                      <pre className="whitespace-pre-wrap">{error}</pre>
+                    </div>
+                  )}
+                  {output && (
+                    <pre className="whitespace-pre-wrap">{output}</pre>
+                  )}
+                  {!output && !error && !isRunning && (
+                    <div className="text-gray-500">
+                      Click "Run Project" to execute the AI model and see results...
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         )}
 

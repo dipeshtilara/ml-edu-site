@@ -33,8 +33,16 @@ export default function ProjectDetailPage() {
     setError('')
     
     try {
-      // This would integrate with Pyodide in a real implementation
-      setOutput('Running AI project... This is a demo output.\n\nProject: ' + project.title + '\nStatus: Execution started\n\nDemo results would appear here in the full implementation.')
+      // Simulate progressive output for realistic demo
+      const outputs = getProjectOutput(project.slug)
+      let currentOutput = ''
+      
+      for (let i = 0; i < outputs.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, 100 + Math.random() * 200))
+        currentOutput += outputs[i] + '\n'
+        setOutput(currentOutput)
+      }
+      
     } catch (err) {
       setError('Error running project: ' + err)
     } finally {

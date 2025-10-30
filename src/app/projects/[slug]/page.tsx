@@ -466,6 +466,7 @@ export default function ProjectDetailPage() {
   const [isRunning, setIsRunning] = useState(false)
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
+  const [visualStep, setVisualStep] = useState(0)
 
   useEffect(() => {
     const foundProject = projectsData.find(p => p.slug === params.slug)

@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "slug": "linear-regression-student-performance",
+    "title": "Linear Regression: Student Performance Analysis",
+    "cbse_unit": "Supervised Learning - Regression",
+    "difficulty": "Beginner",
+    "objectives": [
+      "Understand linear regression fundamentals",
+      "Implement regression from scratch",
+      "Analyze student performance patterns",
+      "Calculate and interpret R-squared, MSE, MAE"
+    ],
+    "tags": ["regression", "statistics", "performance", "education"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "linear_regression.py",
+    "demo_type": "chart+metrics",
+    "dataset": "embedded",
+    "description": "Comprehensive linear regression implementation to predict student exam scores based on study hours, previous scores, and attendance rates."
+  },
+  {
+    "id": 2,
+    "slug": "logistic-regression-email-spam",
+    "title": "Logistic Regression: Email Spam Detection",
+    "cbse_unit": "Supervised Learning - Classification",
+    "difficulty": "Beginner",
+    "objectives": [
+      "Implement logistic regression classifier",
+      "Text preprocessing and feature extraction",
+      "Binary classification evaluation",
+      "Confusion matrix analysis"
+    ],
+    "tags": ["classification", "text-processing", "spam-detection", "nlp"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "logistic_regression.py",
+    "demo_type": "classification+matrix",
+    "dataset": "embedded",
+    "description": "Build a spam detection system using logistic regression with TF-IDF features and comprehensive evaluation metrics."
+  },
+  {
+    "id": 3,
+    "slug": "decision-tree-medical-diagnosis",
+    "title": "Decision Tree: Medical Diagnosis System",
+    "cbse_unit": "Supervised Learning - Tree Algorithms",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement decision tree from scratch",
+      "Calculate information gain and entropy",
+      "Medical symptom analysis",
+      "Tree visualization and interpretation"
+    ],
+    "tags": ["decision-tree", "medical", "diagnosis", "visualization"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "decision_tree.py",
+    "demo_type": "tree+classification",
+    "dataset": "embedded",
+    "description": "Create a medical diagnosis system using decision trees to classify diseases based on patient symptoms and medical history."
+  },
+  {
+    "id": 4,
+    "slug": "random-forest-stock-prediction",
+    "title": "Random Forest: Stock Price Prediction",
+    "cbse_unit": "Ensemble Learning",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Build ensemble random forest model",
+      "Financial time series analysis",
+      "Feature importance evaluation",
+      "Bootstrap aggregating implementation"
+    ],
+    "tags": ["ensemble", "finance", "prediction", "time-series"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "random_forest.py",
+    "demo_type": "prediction+importance",
+    "dataset": "embedded",
+    "description": "Predict stock price movements using Random Forest ensemble method with technical indicators and market data."
+  },
+  {
+    "id": 5,
+    "slug": "svm-handwritten-digit",
+    "title": "SVM: Handwritten Digit Recognition",
+    "cbse_unit": "Support Vector Machines",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement Support Vector Machine",
+      "Image processing and feature extraction",
+      "Multi-class classification",
+      "Kernel methods and hyperparameter tuning"
+    ],
+    "tags": ["svm", "image-processing", "digit-recognition", "computer-vision"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "svm_digits.py",
+    "demo_type": "classification+visualization",
+    "dataset": "embedded",
+    "description": "Recognize handwritten digits using Support Vector Machines with different kernel functions and comprehensive evaluation."
+  },
+  {
+    "id": 6,
+    "slug": "kmeans-customer-segmentation",
+    "title": "K-Means: Customer Segmentation Analysis",
+    "cbse_unit": "Unsupervised Learning - Clustering",
+    "difficulty": "Beginner",
+    "objectives": [
+      "Implement K-means clustering algorithm",
+      "Customer behavior analysis",
+      "Elbow method for optimal k",
+      "Cluster interpretation and visualization"
+    ],
+    "tags": ["clustering", "customer-analysis", "segmentation", "unsupervised"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "kmeans_clustering.py",
+    "demo_type": "clustering+analysis",
+    "dataset": "embedded",
+    "description": "Segment customers based on purchasing behavior using K-means clustering with comprehensive cluster analysis."
+  },
+  {
+    "id": 7,
+    "slug": "hierarchical-gene-clustering",
+    "title": "Hierarchical Clustering: Gene Expression Analysis",
+    "cbse_unit": "Unsupervised Learning - Clustering",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement hierarchical clustering",
+      "Dendrogram construction and interpretation",
+      "Gene expression pattern analysis",
+      "Linkage methods comparison"
+    ],
+    "tags": ["hierarchical", "bioinformatics", "gene-analysis", "dendrogram"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "hierarchical_clustering.py",
+    "demo_type": "dendrogram+heatmap",
+    "dataset": "embedded",
+    "description": "Analyze gene expression patterns using hierarchical clustering with dendrogram visualization and biological interpretation."
+  },
+  {
+    "id": 8,
+    "slug": "neural-network-image-classification",
+    "title": "Neural Network: Multi-layer Image Classification",
+    "cbse_unit": "Deep Learning - Neural Networks",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Build multi-layer neural network from scratch",
+      "Backpropagation algorithm implementation",
+      "Image feature learning",
+      "Activation functions and optimization"
+    ],
+    "tags": ["neural-network", "deep-learning", "image-classification", "backpropagation"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "neural_network.py",
+    "demo_type": "training+visualization",
+    "dataset": "embedded",
+    "description": "Build and train a multi-layer neural network for image classification with detailed backpropagation implementation."
+  },
+  {
+    "id": 9,
+    "slug": "cnn-facial-emotion",
+    "title": "CNN: Facial Emotion Recognition",
+    "cbse_unit": "Deep Learning - Convolutional Networks",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement Convolutional Neural Network",
+      "Facial expression analysis",
+      "Convolution and pooling operations",
+      "Multi-class emotion classification"
+    ],
+    "tags": ["cnn", "computer-vision", "emotion-recognition", "convolution"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "cnn_emotions.py",
+    "demo_type": "image+classification",
+    "dataset": "embedded",
+    "description": "Recognize facial emotions using Convolutional Neural Networks with detailed layer-by-layer implementation."
+  },
+  {
+    "id": 10,
+    "slug": "naive-bayes-sentiment-analysis",
+    "title": "Naive Bayes: Movie Review Sentiment Analysis",
+    "cbse_unit": "Probabilistic Learning",
+    "difficulty": "Beginner",
+    "objectives": [
+      "Implement Naive Bayes classifier",
+      "Text sentiment classification",
+      "Probability calculations and Bayes theorem",
+      "Feature selection and preprocessing"
+    ],
+    "tags": ["naive-bayes", "sentiment-analysis", "nlp", "probability"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "naive_bayes.py",
+    "demo_type": "text+sentiment",
+    "dataset": "embedded",
+    "description": "Classify movie review sentiments using Naive Bayes with comprehensive text preprocessing and probability analysis."
+  },
+  {
+    "id": 11,
+    "slug": "knn-recommendation-system",
+    "title": "K-NN: Movie Recommendation System",
+    "cbse_unit": "Instance-based Learning",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement K-Nearest Neighbors algorithm",
+      "Collaborative filtering implementation",
+      "Distance metrics and similarity measures",
+      "Recommendation accuracy evaluation"
+    ],
+    "tags": ["knn", "recommendation", "collaborative-filtering", "similarity"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "knn_recommendation.py",
+    "demo_type": "recommendation+analysis",
+    "dataset": "embedded",
+    "description": "Build a movie recommendation system using K-Nearest Neighbors with user-item collaborative filtering."
+  },
+  {
+    "id": 12,
+    "slug": "association-rules-market-basket",
+    "title": "Association Rules: Market Basket Analysis",
+    "cbse_unit": "Association Learning",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement Apriori algorithm",
+      "Market basket analysis",
+      "Support, confidence, and lift calculations",
+      "Frequent itemset mining"
+    ],
+    "tags": ["association-rules", "market-basket", "apriori", "frequent-patterns"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "association_rules.py",
+    "demo_type": "rules+analysis",
+    "dataset": "embedded",
+    "description": "Discover purchasing patterns using association rule mining with Apriori algorithm implementation."
+  },
+  {
+    "id": 13,
+    "slug": "pca-dimensionality-reduction",
+    "title": "PCA: Dimensionality Reduction for Visualization",
+    "cbse_unit": "Dimensionality Reduction",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement Principal Component Analysis",
+      "Eigenvalue and eigenvector computation",
+      "Variance explanation and scree plots",
+      "High-dimensional data visualization"
+    ],
+    "tags": ["pca", "dimensionality-reduction", "visualization", "eigenvalues"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "pca_analysis.py",
+    "demo_type": "reduction+visualization",
+    "dataset": "embedded",
+    "description": "Reduce high-dimensional data using PCA with comprehensive variance analysis and visualization."
+  },
+  {
+    "id": 14,
+    "slug": "reinforcement-learning-maze",
+    "title": "Q-Learning: Maze Navigation Agent",
+    "cbse_unit": "Reinforcement Learning",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement Q-learning algorithm",
+      "Maze environment simulation",
+      "Policy learning and optimization",
+      "Reward system and exploration strategies"
+    ],
+    "tags": ["reinforcement-learning", "q-learning", "maze", "agent"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "q_learning_maze.py",
+    "demo_type": "simulation+learning",
+    "dataset": "embedded",
+    "description": "Train an intelligent agent to navigate mazes using Q-learning reinforcement learning algorithm."
+  },
+  {
+    "id": 15,
+    "slug": "time-series-stock-forecasting",
+    "title": "Time Series: Stock Price Forecasting with ARIMA",
+    "cbse_unit": "Time Series Analysis",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement ARIMA model from scratch",
+      "Time series decomposition",
+      "Stationarity testing and differencing",
+      "Financial forecasting and evaluation"
+    ],
+    "tags": ["time-series", "arima", "forecasting", "finance"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "time_series_arima.py",
+    "demo_type": "forecasting+analysis",
+    "dataset": "embedded",
+    "description": "Forecast stock prices using ARIMA time series model with comprehensive statistical analysis."
+  },
+  {
+    "id": 16,
+    "slug": "ensemble-voting-classifier",
+    "title": "Ensemble Methods: Voting Classifier for Disease Prediction",
+    "cbse_unit": "Ensemble Learning",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement voting classifier ensemble",
+      "Multiple algorithm combination",
+      "Medical diagnosis prediction",
+      "Hard and soft voting comparison"
+    ],
+    "tags": ["ensemble", "voting", "medical", "combination"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "ensemble_voting.py",
+    "demo_type": "ensemble+medical",
+    "dataset": "embedded",
+    "description": "Combine multiple algorithms using voting ensemble for improved disease prediction accuracy."
+  },
+  {
+    "id": 17,
+    "slug": "genetic-algorithm-optimization",
+    "title": "Genetic Algorithm: Feature Selection Optimization",
+    "cbse_unit": "Evolutionary Algorithms",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement genetic algorithm from scratch",
+      "Feature selection optimization",
+      "Crossover and mutation operations",
+      "Fitness function design and evolution"
+    ],
+    "tags": ["genetic-algorithm", "optimization", "feature-selection", "evolution"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "genetic_algorithm.py",
+    "demo_type": "optimization+evolution",
+    "dataset": "embedded",
+    "description": "Optimize feature selection using genetic algorithms with detailed evolutionary process visualization."
+  },
+  {
+    "id": 18,
+    "slug": "nlp-text-classification",
+    "title": "NLP: Multi-class Text Classification System",
+    "cbse_unit": "Natural Language Processing",
+    "difficulty": "Intermediate",
+    "objectives": [
+      "Implement comprehensive NLP pipeline",
+      "Text preprocessing and tokenization",
+      "TF-IDF and word embeddings",
+      "Multi-class document classification"
+    ],
+    "tags": ["nlp", "text-classification", "tokenization", "embeddings"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "nlp_classification.py",
+    "demo_type": "text+classification",
+    "dataset": "embedded",
+    "description": "Build a comprehensive text classification system with advanced NLP techniques and feature engineering."
+  },
+  {
+    "id": 19,
+    "slug": "computer-vision-object-detection",
+    "title": "Computer Vision: Object Detection with Feature Matching",
+    "cbse_unit": "Computer Vision",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement object detection pipeline",
+      "Feature extraction and matching",
+      "Image processing and filtering",
+      "Bounding box prediction and evaluation"
+    ],
+    "tags": ["computer-vision", "object-detection", "feature-matching", "image-processing"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "computer_vision.py",
+    "demo_type": "vision+detection",
+    "dataset": "embedded",
+    "description": "Detect and classify objects in images using computer vision techniques with feature matching algorithms."
+  },
+  {
+    "id": 20,
+    "slug": "automl-pipeline-optimization",
+    "title": "AutoML: Automated Machine Learning Pipeline",
+    "cbse_unit": "Automated Machine Learning",
+    "difficulty": "Advanced",
+    "objectives": [
+      "Implement automated ML pipeline",
+      "Algorithm selection and hyperparameter tuning",
+      "Cross-validation and model evaluation",
+      "Pipeline optimization and comparison"
+    ],
+    "tags": ["automl", "pipeline", "optimization", "automation"],
+    "language": "python",
+    "runnable": "pyodide",
+    "code_path": "automl_pipeline.py",
+    "demo_type": "pipeline+comparison",
+    "dataset": "embedded",
+    "description": "Build an automated machine learning system that selects optimal algorithms and hyperparameters for any dataset."
+  }
+]

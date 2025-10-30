@@ -499,7 +499,8 @@ def print_evaluation_results(y_true: List[int], y_pred: List[int], class_names: 
     # Confusion matrix
     confusion_mat = TreeEvaluator.confusion_matrix(y_true, y_pred, len(class_names))
     print(f"\nConfusion Matrix:")
-    print(f"{'Actual\\Predicted':<15}", end="")
+    header = "Actual\\Predicted"
+    print(f"{header:<15}", end="")
     for name in class_names:
         print(f"{name:<10}", end="")
     print()

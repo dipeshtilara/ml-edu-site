@@ -479,6 +479,7 @@ export default function ProjectDetailPage() {
     setIsRunning(true)
     setOutput('')
     setError('')
+    setVisualStep(0)
     
     try {
       // Simulate progressive output for realistic demo
@@ -489,6 +490,16 @@ export default function ProjectDetailPage() {
         await new Promise(resolve => setTimeout(resolve, 100 + Math.random() * 200))
         currentOutput += outputs[i] + '\n'
         setOutput(currentOutput)
+        
+        // Update visual step based on progress
+        const progress = (i + 1) / outputs.length
+        if (progress > 0.1) setVisualStep(1)
+        if (progress > 0.2) setVisualStep(2)
+        if (progress > 0.35) setVisualStep(3)
+        if (progress > 0.5) setVisualStep(4)
+        if (progress > 0.65) setVisualStep(5)
+        if (progress > 0.8) setVisualStep(6)
+        if (progress > 0.95) setVisualStep(7)
       }
       
     } catch (err) {

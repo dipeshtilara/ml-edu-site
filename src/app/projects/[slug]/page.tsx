@@ -2622,6 +2622,24 @@ export default function ProjectDetailPage() {
                 {project.slug === 'svm-handwritten-digit' && (
                   <SVMViz isRunning={isRunning} step={visualStep} />
                 )}
+                {project.slug === 'neural-network-image-classification' && (
+                  <NeuralNetworkViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'naive-bayes-sentiment-analysis' && (
+                  <NaiveBayesViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'cnn-facial-emotion' && (
+                  <CNNViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'pca-dimensionality-reduction' && (
+                  <PCAViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'time-series-stock-forecasting' && (
+                  <TimeSeriesViz isRunning={isRunning} step={visualStep} />
+                )}
+                {project.slug === 'ensemble-voting-classifier' && (
+                  <EnsembleViz isRunning={isRunning} step={visualStep} />
+                )}
               </div>
             )}
 

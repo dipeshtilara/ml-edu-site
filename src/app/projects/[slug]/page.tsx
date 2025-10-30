@@ -14,6 +14,7 @@ import { WordExporter } from '@/components/project/WordExporter'
 import { LinearRegressionViz } from '@/components/visualizations/LinearRegressionViz'
 import { KMeansViz } from '@/components/visualizations/KMeansViz'
 import { LogisticRegressionViz } from '@/components/visualizations/LogisticRegressionViz'
+import { DecisionTreeViz } from '@/components/visualizations/DecisionTreeViz'
 
 // Function to get realistic output for each project
 function getProjectOutput(slug: string): string[] {

@@ -254,7 +254,7 @@
     "tags": ["pca", "dimensionality-reduction", "visualization", "eigenvalues"],
     "language": "python",
     "runnable": "pyodide",
-    "code_path": "pca_analysis.py",
+    "code_path": "pca.py",
     "demo_type": "reduction+visualization",
     "dataset": "embedded",
     "description": "Reduce high-dimensional data using PCA with comprehensive variance analysis and visualization."

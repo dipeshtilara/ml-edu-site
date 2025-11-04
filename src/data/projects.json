@@ -174,7 +174,7 @@
     "tags": ["cnn", "computer-vision", "emotion-recognition", "convolution"],
     "language": "python",
     "runnable": "pyodide",
-    "code_path": "cnn_emotions.py",
+    "code_path": "cnn.py",
     "demo_type": "image+classification",
     "dataset": "embedded",
     "description": "Recognize facial emotions using Convolutional Neural Networks with detailed layer-by-layer implementation."

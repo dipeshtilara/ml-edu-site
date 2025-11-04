@@ -305,12 +305,10 @@ def main():
         antecedent = ', '.join(sorted(list(rule['antecedent'])))
         consequent = ', '.join(sorted(list(rule['consequent'])))
         
-        print(f"{i}. {{{
-    antecedent}}} => {{{
-    consequent}}}")
+        print(f"{i}. {{{antecedent}}} => {{{consequent}}}")
         print(f"   Support: {rule['support']:.3f}, ", end="")
-        print(f"Confidence: {rule['confidence']:.3f}, ", end="")
-        print(f"Lift: {rule['lift']:.3f}")
+        print(f"   Confidence: {rule['confidence']:.3f}, ", end="")
+        print(f"   Lift: {rule['lift']:.3f}")
         print()
     
     # Metrics explanation

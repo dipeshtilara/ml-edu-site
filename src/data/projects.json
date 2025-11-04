@@ -294,7 +294,7 @@
     "tags": ["time-series", "arima", "forecasting", "finance"],
     "language": "python",
     "runnable": "pyodide",
-    "code_path": "time_series_arima.py",
+    "code_path": "time_series.py",
     "demo_type": "forecasting+analysis",
     "dataset": "embedded",
     "description": "Forecast stock prices using ARIMA time series model with comprehensive statistical analysis."

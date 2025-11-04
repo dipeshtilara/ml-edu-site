@@ -314,7 +314,7 @@
     "tags": ["ensemble", "voting", "medical", "combination"],
     "language": "python",
     "runnable": "pyodide",
-    "code_path": "ensemble_voting.py",
+    "code_path": "ensemble.py",
     "demo_type": "ensemble+medical",
     "dataset": "embedded",
     "description": "Combine multiple algorithms using voting ensemble for improved disease prediction accuracy."

@@ -318,7 +318,8 @@ def main():
             print(f"  {name:10s}: {bar_viz} {confidence:.1f}%")
         
         best_match = matches[0][0]
-        print(f"Best match: {best_match} {'\u2713' if best_match == obj_type else '\u2717'}")
+        status_symbol = '\u2713' if best_match == obj_type else '\u2717'
+        print(f"Best match: {best_match} {status_symbol}")
     print()
     
     # Performance metrics

@@ -6,13 +6,13 @@ import math
 import random
 from typing import List, Tuple, Dict
 
-def print_header():
-    """Print project header with information"""
-    print("=" * 80)
-    print("AI PROJECT IMPLEMENTATION")
-    print("CBSE Class 12 AI Project")
-    print("=" * 80)
-    print()
+def st.write_header():
+    """st.write project header with information"""
+    st.write("=" * 80)
+    st.write("AI PROJECT IMPLEMENTATION")
+    st.write("CBSE Class 12 AI Project")
+    st.write("=" * 80)
+    st.write()
 
 class AIModel:
     """Complete AI Algorithm implementation from scratch"""
@@ -24,13 +24,13 @@ class AIModel:
         
     def fit(self, X: List[List[float]], y: List[float]):
         """Train the model on provided data"""
-        print(f"Training AI Algorithm model...")
+        st.write(f"Training AI Algorithm model...")
         
         # Training implementation would go here
         # This is a complete, educational implementation
         
         self.is_trained = True
-        print("Training completed successfully!")
+        st.write("Training completed successfully!")
     
     def predict(self, X: List[List[float]]) -> List[float]:
         """Make predictions on new data"""
@@ -132,48 +132,48 @@ def split_data(X: List[List[float]], y: List[float],
     
     return X_train, X_test, y_train, y_test
 
-def print_results(metrics: Dict[str, float]):
-    """Print comprehensive results analysis"""
-    print("\n" + "=" * 60)
-    print("MODEL EVALUATION RESULTS")
-    print("=" * 60)
+def st.write_results(metrics: Dict[str, float]):
+    """st.write comprehensive results analysis"""
+    st.write("\n" + "=" * 60)
+    st.write("MODEL EVALUATION RESULTS")
+    st.write("=" * 60)
     
     for metric_name, value in metrics.items():
-        print(f"{metric_name.upper()}: {value:.4f}")
+        st.write(f"{metric_name.upper()}: {value:.4f}")
     
-    print("\n" + "=" * 60)
-    print("PROJECT COMPLETED SUCCESSFULLY!")
-    print("=" * 60)
+    st.write("\n" + "=" * 60)
+    st.write("PROJECT COMPLETED SUCCESSFULLY!")
+    st.write("=" * 60)
 
 def main():
     """Main function demonstrating AI Project Implementation"""
-    print_header()
+    st.write_header()
     
     # Generate dataset
-    print("Generating realistic dataset...")
+    st.write("Generating realistic dataset...")
     X, y = DataGenerator.generate_data(n_samples=500)
-    print(f"Generated {len(X)} samples with {len(X[0])} features")
+    st.write(f"Generated {len(X)} samples with {len(X[0])} features")
     
     # Split data
-    print("\nSplitting data into training and testing sets...")
+    st.write("\nSplitting data into training and testing sets...")
     X_train, X_test, y_train, y_test = split_data(X, y)
-    print(f"Training set: {len(X_train)} samples")
-    print(f"Testing set: {len(X_test)} samples")
+    st.write(f"Training set: {len(X_train)} samples")
+    st.write(f"Testing set: {len(X_test)} samples")
     
     # Train model
-    print("\nTraining AI Algorithm model...")
+    st.write("\nTraining AI Algorithm model...")
     model = AIModel()
     model.fit(X_train, y_train)
     
     # Make predictions
-    print("\nMaking predictions...")
+    st.write("\nMaking predictions...")
     y_pred = model.predict(X_test)
     
     # Evaluate model
-    print("\nEvaluating model performance...")
+    st.write("\nEvaluating model performance...")
     evaluator = ModelEvaluator()
     metrics = evaluator.calculate_metrics(y_test, y_pred)
-    print_results(metrics)
+    st.write_results(metrics)
     
     return {
         'model': model,

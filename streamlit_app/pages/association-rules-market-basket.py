@@ -132,7 +132,7 @@ def split_data(X: List[List[float]], y: List[float],
     
     return X_train, X_test, y_train, y_test
 
-def st.write_results(metrics: Dict[str, float]):
+def print_results(metrics: Dict[str, float]):
     """st.write comprehensive results analysis"""
     st.write("\n" + "=" * 60)
     st.write("MODEL EVALUATION RESULTS")
@@ -147,7 +147,7 @@ def st.write_results(metrics: Dict[str, float]):
 
 def main():
     """Main function demonstrating AI Project Implementation"""
-    st.write_header()
+    print_header()
     
     # Generate dataset
     st.write("Generating realistic dataset...")
@@ -173,7 +173,7 @@ def main():
     st.write("\nEvaluating model performance...")
     evaluator = ModelEvaluator()
     metrics = evaluator.calculate_metrics(y_test, y_pred)
-    st.write_results(metrics)
+    print_results(metrics)
     
     return {
         'model': model,
